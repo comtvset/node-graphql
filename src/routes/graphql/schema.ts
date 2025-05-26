@@ -16,6 +16,7 @@ import {
   resolveUser,
   resolveUsers,
 } from './resolvers.js';
+import { RootMutationType } from './mutation.js';
 
 export interface GraphQLContext {
   prisma: PrismaClient;
@@ -63,4 +64,5 @@ export const schema = new GraphQLSchema({
       },
     },
   }),
+  mutation: RootMutationType,
 });
